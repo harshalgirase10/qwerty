@@ -1,0 +1,57 @@
+Git que (nitman talks)
+
+1.diff bet fit and GitHub
+2.diff bet repo and branch in git
+3.diff bet git push and git pull
+4.diff bet git pull and git fetch
+5.diff bet git clone and git remote
+6.diff bet git diff and git status
+7.diff bet git merge and git rebase
+8.whatvis git repo and how to create it
+9.how can you fix broken commit.
+10.what happen if .git directory gets deleted
+11.whatvis use of staging area or indexing in git
+12.which are the different git repository hosting functions
+
+13.wha5 is version control system
+14.whayvare the advantages of git or features of git
+15.diff bet git and SVN
+16.what does command git config do
+What is fuctionality of git-ls-tree
+17.what does git stash,git stash apply,git stash pop,git stash drop command do?
+18.what does git annotate command do
+19.what does git cherry-pick command do
+20.diff bet git revert and git reset
+21.what does commit message mean?
+22.what do you mean by head in term git and also tell the number of head that can  be present in repository.
+
+
+23.how to revert bad commit which is already pushed
+24.diff bet head ,working tree and index in git
+25.what has to be run to squash multiple commits (last N) into single commit
+26.what does git reflog do
+27.can you recover deleted branch in git
+28.what is conflict in git and how to resolve it
+
+
+29.what is command to setup your git username and git email
+30.What is command to initialise q git repository
+31.what is command to add file/multiple files in staging area in git
+32. Command to commit changes with messeg in git
+33.what is command to see commit history
+34.command to create new branch in git
+35.command to switch new branch in git
+36.command to list branches in git
+37.command to create branch and switch to it immediately
+38.command to delete branch 
+39.command to merge two branch
+40.command to abort conflicting merge in git
+41.command to pull/push changes git
+42.command to check remote branches that git is tracking 
+43.command to fetch remote repository changes in git
+44.command to force push request in git
+45.command to add remote repository in git
+46.command to rename files in git
+47.commamd to ignore files in git
+48.command to remove tracked files from current working tree in git
+49.command to rollback last commit
