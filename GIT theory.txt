@@ -1,0 +1,76 @@
+CVCS                               
+In CVCS, client need to get local copy of source from server, do the changes and commit those  changes to central source on server.
+CVCS system are easy to learn and Set up. 
+Working on branches is difficult in CVCS . Developers often faces more merge conflicts.
+CVCS System do not provide offline access.
+It is slower as every command need to communication with server.
+If it gets down, developer cannot work.
+
+DVDS
+In DVCS each client can have local repository as well and have complete history on it. Client need to push changes to branch which will then be pushed to server repository.
+DVCS systems are difficult. For beginners. Multiple command need to be.Remember.
+Working on branches is easy, less conflicts.
+DVCS System working fine on offline mode as a client copies the entire repository on their local machine. 
+It is faster as mostly user details with local copy without hitting server every time.
+If DVCS is down, developer can work using their local copies.
+
+
+Git 
+mercurial -substitute of git
+
+Github --> Service
+Git -----> Software
+Gitlab --> Service
+
+Stages of Git/Workflow
+
+1. Working Directory/Workspace
+2. Staging Area
+3. Local Repository
+
+Staging to Local Repo --> Commit/Save/Snapshot
+We get Commit ID which is unique (40 digit alphanumeric)
+
+Github/Central Repo:-
+Snapshot is increamental backup
+
+Repository:-
+Repository is a place where you have all your codes or kind of folder on a server. 
+It is a kind of folder related to one product. 
+Changes are personal to that particular repository. 
+
+Server. 
+It  stores all repositories. 
+It contains metadata also.  
+
+Working directory:-
+Where you see files physically and do modification. 
+At a time, You can work on a particular branch.
+
+
+In other CVCS Developers generally makes modification and commit. There changes directly to the repository, but git uses a different strategy. Git does not track each and every modified file whenever you do commit an operation. Git looks for the files present in the staging area. Only those files present in the staging area are considered for commit and not all the modified files.
+
+Working Directory ==> Staging Area ==> Local Repo
+
+
+commit ID/Version ID/Version:-
+Reference to identify each changes. 
+To identify who changed the file. 
+
+Tags:-
+Tags assign a meaningful name with a specific version in a repository. 
+Once tag is created for a particular save, even if you create a new commit, it will not be updated.
+
+Snapshots:-
+represents some data of particular time. 
+It is always incremental. i.e. it stores the changes (Append data) only not entire copy.
+
+
+
+Commit:-
+store changes in a repository. You will get 1 commit ID.
+
+
+
+
+
