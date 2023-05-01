@@ -1,0 +1,264 @@
+1. What is Docker? 
+   Docker is an open-source containerization. platform that allows developers to create, deploy, and run applications in isolated/different 
+   containers.
+   Containers  that are lightweight, standalone, and executable packages that include everything needed to run the application,
+
+2.What is docker container? 
+  Docker containers consist of application and all their dependencies. 
+  They share the kernel and system resources with other containers and run as isolated system in the host operating system.  
+  Technically they are just runtime instances of docker images. 
+  Image becomes container when they run on docker engine. 
+
+3. What is docker file? 
+   Doctor file is just a text file which consist a set of instructions to build docker image. 
+   Once a Dockerfile has been created, it can be used to build a Docker image using the docker build command. The resulting image can then be 
+   run    
+   in a Docker container using the docker run command. This allows developers to easily test, package, and deploy their applications 
+
+4.What is docker image? 
+  It is read only binary template used to create docker container. Single file with all dependencies and configuration required to run
+  application Oregon program.   
+        or
+  image is a read-only template that contains everything needed to run an application, 
+
+5. What is Docker Compose? 
+   Docker Compose is a service for define And run multi-container Docker Applications. It allows developers to define a set of services, each of
+   service runs in its own container, and specify how they interact with each other.  
+   Compose makes easy to Application that consist of multiple containers and simplifies the process of setting up and configuration. 
+
+6. What is docker name space?
+   Docker namespace is a feature of the Linux kernel that provides process isolation and resource management. Namespaces allow Docker containers
+   to run in an isolated environment, with their own view of the system resources,
+   PID namespace
+   Network namespace: 
+   Mount namespace:
+   UTS namespace
+   User namespace: 
+
+7. Difference between  COPY and ADD
+   COPY: Copy file from local system We need to provide source,destination. We can't Download file from Internet & any remote repository.
+   ADD: Similar to copy. But it provides the feature that we can Download the file from the Internet and we can also extract .tar and .zip files
+
+8. On what circumstances will you lose data stored in container? 
+   When docker container is deleted. all data stored within the container is lost. if volumes that were not mounted outside of the container
+
+9.what is docker image registry?
+  Docker image registry is a central repository that stores and distributes Docker images. 
+  The most commonly used Docker image registry is Docker Hub,
+  which is a public registry that contains a large collection of pre-built images that can be used as a base for building custom images.
+
+10. Advantages of Docker?
+   No pre allocation of RAM. 
+   CI efficiency. Docker enables you to build container image and use that same image across every step of deployment process. 
+   Less cost. 
+   It is light in weight. 
+   It can run on physical hardware, virtual hardware or on cloud. 
+   You can reuse the image. 
+   It took very less time to create a container.
+
+11. Drawback of Docker?
+    It is not a good solution for application which requires high GUI. graphics
+    Difficult to manage large amount of containers. 
+    It does not provide cross platform compatibility, means if an application is designed to run in a docker container on a window then it 
+    cannot run on a Linux or vice versa.
+    Doctor is a suitable when deployment OS and testing OS are same. If the OS is different we should use VM. 
+    No solution for data recovery and backup.
+
+
+13. What are the darker components?
+    Docker daemon. Docker daemon run on a host operating system. It is responsible for running containers to. Manage Docker services. Docker 
+    daemon can communicate with other daman.
+
+    Docker client. Docker user can interact with docker through client. Docker client uses commands and REST API to communicate with the docker 
+    demon. When client run any server command on a docker client terminal, the client terminal Saints. Thus docker command to the docker daemon.  
+    It is possible for docker client to communicate with more than one Damon.
+
+    Docker host. Docker host is a used to provide an environment to execute and run application. It contains the docker daemon, images, 
+    containers, network and storage.
+
+    Docker Hub/registry:- Docker Hub manage and store docker images. There are 2 types of registries. Public registry and private registry.
+
+14.Can a paused container be removed from Docker?
+   No, a paused container cannot be removed from Docker.
+   When a container is paused, it is temporarily suspended and all processes inside the container are frozen. The container remains in a 
+   "Paused" state until it is unpaused or stopped.
+   If you try to remove a paused container using the "docker rm" command, you will receive an error message stating that the container cannot be 
+   removed because it is paused.
+
+15. Difference between virtualization and containerization?
+  
+Virtualization.              	                       Containerization. 
+	
+Each VM runs its own OS. 	                            All container share the same kernel of host 
+Boot up time is in a minute. 	                       Boot up time is in a seconds. 
+Cannot run more than couple of VM on average machine. 	Can many containers on a average machine or on a laptop?
+Hardware level virtualization. 	                       OS level virtualization. 
+Fully isolated and hence more secure. 	              Process level isolation. Maybe less secure
+Allocates required memory. 	                            Requires less memory space.  
+Heavyweight. 	                                          Lightweight. 
+Slow provisioning. 	                                 Real time provisioning and scalability. 
+
+
+16.Can a container restart by itself?
+   Yes, a container can be configured to restart automatically if it stops or crashes.
+
+17. Difference between docker image and layer?
+   Docker layer is a read-only filesystem that is used to build a Docker image
+   Docker image is composed of one or more layers, each representing a change or modification to the filesystem.
+   The main difference between a Docker image and a layer is that an image is a complete, self-contained package that includes all the layers  
+   necessary to run a specific application or service, while a layer is a single, discrete modification to the filesystem that is shared between  
+   multiple images.
+
+18.What is the purpose of volume parameter in docker run command?
+   The --volume parameter in the docker run command is used to mount a volume or directory from the host machine into the container. This allows    
+   the container to access files and data that are stored on the host machine,
+
+19. Where are Doctor volume stored in a docker?
+    volumes are stored outside of the container's filesystem, in a separate directory on the host machine. 
+    path is --> /var/lib/docker/volumes
+
+20. What are the basic requirements for a doctor to run on any system?
+    Doctor can install on any operating system, but Docker engine runs natively on Linux distribution.
+    i.e. Linux, macOS, and Windows
+
+21. List the most commonly used instructions in a docker file.
+    FROM: Specifies the base image to build Docker image
+    RUN: Runs a command or script inside the container and creates a new layer in the image.
+    COPY it copies the file from local system. We just need to. Give source and destination.
+    ADD: It is similar to copy but it has extra feature that we can download files from Internet and also we can extract .tar,.zip Files.
+    WORKDIR: Sets the working directory 
+    EXPOSE: to expose ports at runtime.
+    CMD  to execute commands but during container creation.
+    ENTRYPOINT: similar to CMD but higher priority over CMD. First command will be executed by ENTRYPOINT only.
+    ENV: Sets environment variables inside the container.
+    ARG: Defines a variable that can be passed in at build time.
+    LABEL: Adds metadata to the Docker image, such as version numbers, author names, or descriptions.
+
+22.Difference between Docker daemon logging and container logging
+  Docker daemon logging refers to the logging of events and actions that occur within the Docker engine itself, such as when a container is 
+  started or stopped, or when an image is built or pulled.
+  container logging refers to the logging of application-specific events and messages that occur within a running container. Each container has
+  its own set of logs, which can be viewed using the docker logs command. 
+ 
+23. Difference between CMD and ENTRYPOINT.
+
+    CMD  execute the commands but during container creation. 
+    instruction specifies the default command to be executed when the container starts.but if it is not present, the Docker engine will use the     
+    default CMD specified in the base image.
+    ENTRYPOINT. Similar to CMD. Bhatt higher priority over sea MD first command will be executed by ENTRYPOINT Only.
+
+In summary, CMD sets a default command and its arguments that can be overridden at runtime, while ENTRYPOINT specifies the command that will always be executed when the container starts, with any additional arguments passed in at runtime. In most cases, CMD is used to specify the default command for the container, while ENTRYPOINT is used to specify the primary command or executable for the container.
+
+24.How many containers you can run in a doctor and what are the factors influencing this limit?
+   The number of containers that can be run in Docker depends on some factors, like, the resources of the host machine and the resources 
+   required by each container. There is no fixed limit on the number of containers that can be run in Docker
+
+25. Describe the life cycle of docker container.
+   The life cycle of a Docker container can be divided into four main stages:
+   Creation: The first stage in the life cycle of a Docker container is its creation.
+   Running: Once the container is created, it enters the running stage. During this stage, the process specified in the Dockerfile 
+   Paused: If a running container is paused using the docker pause command, it enters the paused stage.
+   Stopped: The final stage in the life cycle of a Docker container is when it is stopped or terminated.
+
+26. How to use docker for multiple application environment?
+    Write Dockerfiles for each environment to define the required configuration, dependencies, and services. Use Docker build to create images 
+    for each environment.
+    Use Docker Compose: Use Docker Compose to manage multiple containers as a single application. You can define the different services and 
+    their  configuration in a YAML file and use Docker Compose to start and stop the containers.
+ 
+27. Difference between docker run and docker exec?
+   docker run is used to create and start a new Docker container. It is used to create a new container from an image and run a command in the 
+   new container.
+   docker exec is used to run a command in an existing container. It is used to execute a command inside a running container.
+
+28. Can we use JSON instead of YAML while developing docker compose file in docker. 
+    Yes, it can be used in order to run Docker Compose with. JSON
+    docker-compose -f docker-compose.json up 
+
+
+
+
+
+
+
+28. Command to check what docker port is exposed.
+    Doctor Stats. 
+    
+29. Command to list the status of all docker containers.
+    docker ps 
+    docker ps -a
+
+30. What command can you run to export a docker image as a archive?
+    docker save -o <exported>.tar <image-name>
+
+31. What command can be run to import a pre exported docker image into another docker host?
+    docker load -i <export_image_name>.tar
+
+32. What command is used to check for the version of docker client and server?
+    docker version
+
+33. Command to create a container. 
+    docker container create -t -i --name <container-name> ubuntu:latest
+    it will create container but not start the container
+
+35.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
